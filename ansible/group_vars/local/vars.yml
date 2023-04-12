@@ -1,0 +1,4 @@
+local_admin_ssh_key: "{{ vault_admin_ssh_key }}"
+local_yc_token: "{{ vault_yc_token }}"
+local_yc_folder_id: "{{ vault_yc_folder_id }}"
+local_yc_id: "{{ vault_yc_id }}"
