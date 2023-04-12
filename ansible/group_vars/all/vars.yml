@@ -1,0 +1,16 @@
+app_port: 32000
+db_name: eklmn
+db_port: 6432
+db_username: eprst
+db_password: "{{ vault_db_password }}"
+datadog_site: "datadoghq.eu"
+datadog_api_key: "{{ vault_datadog_api_key }}"
+datadog_app_key: "{{ vault_datadog_app_key }}"
+datadog_checks:
+  http_check:
+    init_config:
+    instances:
+      - name: http_check
+        url: "http://localhost:{{ app_port }}"
+        timeout: 5
+        method: GET
